@@ -3,7 +3,7 @@
 Welcome to Ambai Industries — a premium digital storefront dedicated to bringing the finest quality cattle feed straight to Indian dairy farmers.
 
 🔗 Live Preview
-[Visit Ambai Industries on Vercel](https://ambai-industries-website.vercel.app/) (Update this link with your actual Vercel deployment URL)
+[Visit Ambai Industries on Vercel](https://ambai-industries.vercel.app/) (Update this link with your actual Vercel deployment URL)
 
 🌾 About Us
 Ambai Industries is built on the belief that cattle nutrition shouldn't come with a compromise. We offer 100% safe, scientifically-formulated cattle feed crafted using high-quality raw materials and modern milling techniques.
