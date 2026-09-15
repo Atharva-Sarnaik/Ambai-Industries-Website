@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+/* ============================================================
+   SCROLL REVEAL (IntersectionObserver driven)
+   Component: src/components/ui/ScrollReveal.tsx
+============================================================ */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.scroll-reveal.scroll-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@layer base {
+  :root {
+    /* === BBF-INSPIRED BRAND COLORS === */
+    /* Primary: Deep Forest Green (BBF's dark green) */
+    --color-forest: #0D4B34;
+    --color-forest-dark: #0A3828;
+    --color-forest-light: #1A6B4A;
+
+    /* Accent: Deep Burgundy Red (BBF's icon/accent color) */
+    --color-burgundy: #8B1A1A;
+    --color-burgundy-dark: #6B1212;
+    --color-burgundy-light: #A82222;
+
+    /* Background: Whitewashed, warm vintage paper */
+    --color-paper: #F5F0E8;
+    --color-paper-warm: #EDE7D9;
+    --color-paper-light: #FAF8F4;
+
+    /* Text */
+    --color-ink: #1A1A1A;
+    --color-ink-muted: #4A4A4A;
+    --color-ink-light: #6B6B6B;
+
+    /* Borders */
+    --color-border: #D4C9B8;
+    --color-border-light: #E8E2D8;
+
+    /* Fonts */
+    --font-display: var(--font-display); /* Fredoka - chunky farm font */
+    --font-body: var(--font-body);       /* Raleway - clean body */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), "Fredoka", system-ui, sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+============================================================ */
+.font-display {
+  font-family: var(--font-display), "Fredoka", system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* ============================================================
+   COLOR UTILITIES
+============================================================ */
+.text-forest { color: #0D4B34; }
+.bg-forest { background-color: #0D4B34; }
+.border-forest { border-color: #0D4B34; }
+
+.text-burgundy { color: #8B1A1A; }
+.bg-burgundy { background-color: #8B1A1A; }
+.border-burgundy { border-color: #8B1A1A; }
+
+.text-paper { color: #F5F0E8; }
+.bg-paper { background-color: #F5F0E8; }
+
+.text-paper-warm { color: #EDE7D9; }
+.bg-paper-warm { background-color: #EDE7D9; }
+
+/* ============================================================
+   WHITEWASH WOOD TEXTURE EFFECT
+   Mimics BBF's white-painted wood plank background
+============================================================ */
+.bg-whitewash {
+  background-color: #F5F0E8;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(0,0,0,0.012) 60px,
+      rgba(0,0,0,0.012) 61px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 180px,
+      rgba(0,0,0,0.008) 180px,
+      rgba(0,0,0,0.008) 181px
+    );
+}
+
+/* ============================================================
+   PAPER GRAIN TEXTURE
+   Tactile agricultural paper tooth (ultra-subtle 2.5% opacity)
+============================================================ */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   TORN / BRUSH-STROKE EDGE MASKS
+   Creates the organic paint-edge transition BBF uses
+============================================================ */
+.edge-top-torn {
+  position: relative;
+  margin-top: -2px;
+}
+.edge-top-torn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: inherit;
+  clip-path: polygon(
+    0% 100%, 2% 60%, 5% 80%, 8% 45%, 12% 70%, 16% 30%, 20% 65%, 24% 20%,
+    28% 55%, 32% 15%, 36% 50%, 40% 10%, 44% 45%, 48% 5%, 52% 40%, 56% 0%,
+    60% 35%, 64% 5%, 68% 30%, 72% 0%, 76% 25%, 80% 0%, 84% 20%, 88% 0%,
+    92% 15%, 96% 0%, 100% 10%, 100% 100%
+  );
+  z-index: 2;
+}
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIONS
+   Framer-free CSS-only reveal (BBF-style: fade up)
+============================================================ */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-reveal-up {
+  animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-reveal-up-delay-1 {
+  animation: revealUp 0.7s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-reveal-up-delay-2 {
+  animation: revealUp 0.7s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-reveal-up-delay-3 {
+  animation: revealUp 0.7s 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease both;
+}
+
+/* ============================================================
+   NAVBAR GLASS UTILITY
+============================================================ */
+.nav-glass {
+  background-color: rgba(245, 240, 232, 0.72);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
+
+/* ============================================================
+   DIVIDER - THIN RED RULE (like BBF's section separator)
+============================================================ */
+.divider-burgundy {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #8B1A1A;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   IMAGE ZOOM HOVER
+============================================================ */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   WATERMARK BRAND TEXT (background "KISAN DHARA" behind section text)
+============================================================ */
+.brand-watermark {
+  position: relative;
+}
+.brand-watermark::before {
+  content: attr(data-watermark);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display), "Fredoka", system-ui, sans-serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 700;
+  color: rgba(13, 75, 52, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.05em;
+  z-index: 0;
+}
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B1A1A;
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
