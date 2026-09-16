@@ -73,7 +73,7 @@ export default function HeroSection({ videoSrc }: HeroSectionProps) {
       </div>
 
       {/* Top spacer */}
-      <div className="h-16" />
+      <div className="h-32 md:h-48" />
 
       {/* Hero Content: Centered editorial headline with fade-out under header */}
       <div

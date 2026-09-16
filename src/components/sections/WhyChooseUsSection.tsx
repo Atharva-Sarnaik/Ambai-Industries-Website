@@ -25,7 +25,7 @@ const principles: PrincipleItem[] = [
     id: "01",
     tag: "Process Consistency",
     title: "Consistent Manufacturing",
-    hindiTitle: "निरंतर एवं मानकीकृत उत्पादन",
+    hindiTitle: "सातत्यपूर्ण आणि प्रमाणित उत्पादन",
     description:
       "A structured approach to dependable feed production. Standard operating controls ensure every batch maintains identical particle granulation and blending uniformity.",
     image: "/images/manufacturing/facility-interior.jpg",
@@ -36,7 +36,7 @@ const principles: PrincipleItem[] = [
     id: "02",
     tag: "Unadulterated Grains",
     title: "Selected Ingredients",
-    hindiTitle: "पारदर्शी एवं शुद्ध कच्चा माल",
+    hindiTitle: "पारदर्शक आणि शुद्ध कच्चा माल",
     description:
       "Direct attention to the grains entering our mill. Sourced from verified mandis and screened for moisture, physical cleanliness, and wholesome whole-grain density.",
     image: "/images/raw-materials/wholesome-wheat.jpg",
@@ -47,7 +47,7 @@ const principles: PrincipleItem[] = [
     id: "03",
     tag: "Targeted Nutrition",
     title: "Product Variety & Grades",
-    hindiTitle: "विभिन्न आवश्यकता अनुसार ग्रेड्स",
+    hindiTitle: "विविध गरजेनुसार ग्रेड्स",
     description:
       "Multiple feed formulations with distinct particle variants tailored to match various dairy herd sizes, feeding habits, and operational budgets.",
     image: "/images/products/maize-feed.jpg",
@@ -58,7 +58,7 @@ const principles: PrincipleItem[] = [
     id: "04",
     tag: "Punctual Dispatch",
     title: "Reliable Supply",
-    hindiTitle: "विश्वसनीय आपूर्ति एवं सुरक्षित पैकिंग",
+    hindiTitle: "विश्वसनीय पुरवठा आणि सुरक्षित पॅकिंग",
     description:
       "Serving feed distributors, retail counters, and dairy owners with punctual dispatch in secure 50 kg multi-wall sacks.",
     image: "/images/manufacturing/bagging-line.jpg",
@@ -132,7 +132,7 @@ export default function WhyChooseUsSection() {
                 Why Cattle Owners & Dealers Partner with Us
               </h2>
               <p className="font-display font-semibold text-[#8B1A1A] text-xl sm:text-2xl mb-4">
-                हमारे साथ साझेदारी के मुख्य कारण
+                आमच्यासोबत भागीदारी करण्याची मुख्य कारणे
               </p>
               <p className="font-body text-[#4A4A4A] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 Built on transparent manufacturing practices, dependable raw material selection, and long-term commercial integrity with Indian dairy farmers.

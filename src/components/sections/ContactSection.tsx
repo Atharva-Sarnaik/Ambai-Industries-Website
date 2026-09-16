@@ -61,7 +61,7 @@ export default function ContactSection() {
                 Contact Us
               </h1>
               <p className="font-display font-semibold text-[#DEAC4F] text-xl sm:text-2xl mb-3 drop-shadow-md">
-                संपर्क एवं व्यापारिक पूछताछ
+                संपर्क आणि व्यावसायिक चौकशी
               </p>
               <p className="font-display font-medium text-base sm:text-xl text-[#F5F0E8] leading-relaxed max-w-2xl mx-auto drop-shadow-md">
                 Owned & Operated by our family to nourish Indian dairy herds!

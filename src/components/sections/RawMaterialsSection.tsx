@@ -74,7 +74,7 @@ export default function RawMaterialsSection() {
                 From Carefully Selected Ingredients
               </h2>
               <p className="font-display font-semibold text-[#8B1A1A] text-xl sm:text-2xl mb-4">
-                सावधानीपूर्वक चयनित कच्चे माल से निर्मित
+                काळजीपूर्वक निवडलेल्या कच्च्या मालापासून निर्मित
               </p>
               <p className="font-body text-[#4A4A4A] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 A superior cattle feed starts with wholesome, unadulterated raw grains. We screen, clean, and grade every batch before processing.

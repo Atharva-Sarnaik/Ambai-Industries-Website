@@ -30,8 +30,8 @@ export const productsData: Product[] = [
   {
     id: "prod-01",
     slug: "maize-makka-cattle-feed",
-    name: "Maize / Makka Cattle Feed",
-    hindiName: "मक्का पशु आहार",
+    name: "Maize Mash",
+    hindiName: "मका चुन्नी",
     category: "Grain-Based Energy Feed",
     badge: "High Energy Mash",
     shortDescription:
@@ -90,8 +90,8 @@ export const productsData: Product[] = [
   {
     id: "prod-02",
     slug: "wheat-bran-cattle-feed",
-    name: "Wheat Bran Cattle Feed",
-    hindiName: "गेहूं चोकर पशु आहार",
+    name: "Wheat Bran / Mash",
+    hindiName: "गहू भुसा",
     category: "Fibre & Digestion Feed",
     badge: "Natural Flake Bran",
     shortDescription:

@@ -41,7 +41,7 @@ export default function QualitySection() {
           <SectionHeading
             eyebrow="BATCH DISCIPLINE"
             title="Consistency Matters"
-            hindiTitle="गुणवत्ता और निरंतरता का महत्व"
+            hindiTitle="गुणवत्ता आणि सातत्याचे महत्त्व"
             description="Dairy farming requires dependability. When cattle receive uniform rations daily, digestion remains stable and milk productivity remains consistent."
           />
         </EditorialReveal>

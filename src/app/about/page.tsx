@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-clip">
       {/* ============================================================
           1. HERO SECTION: Full-Bleed Cows Image under Transparent Navbar
           (Matches Burgundy Brook Farm reference Image 1)
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 About Our Mill
               </h1>
               <p className="font-display font-semibold text-[#DEAC4F] text-xl sm:text-2xl mb-4 drop-shadow-md">
-                हमारे मिल और विनिर्माण की कहानी
+                आमच्या मिल आणि उत्पादनाची कथा
               </p>
               <p className="font-display font-medium text-base sm:text-xl text-[#F5F0E8] leading-relaxed max-w-2xl mx-auto drop-shadow-md">
                 Owned & Operated by our family to nourish Indian dairy herds!
@@ -263,7 +263,7 @@ export default function AboutPage() {
               What Guides Every Milling Batch
             </h2>
             <p className="font-display font-semibold text-[#8B1A1A] text-lg sm:text-xl">
-              हमारे कार्य सिद्धांत
+              आमची कार्य तत्त्वे
             </p>
           </div>
 

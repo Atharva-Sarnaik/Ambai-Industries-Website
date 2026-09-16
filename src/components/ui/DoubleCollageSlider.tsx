@@ -83,7 +83,7 @@ export default function DoubleCollageSlider({ slides, autoPlayInterval = 7000 }:
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="max-w-[1400px] mx-auto min-h-[900px] flex items-center justify-center relative">
+      <div className="max-w-[1400px] mx-auto min-h-[650px] py-16 flex items-center justify-center relative">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -108,7 +108,7 @@ export default function DoubleCollageSlider({ slides, autoPlayInterval = 7000 }:
                     <h3 className="font-display font-black text-white leading-[1.1] mb-4 tracking-tight drop-shadow-md text-4xl xl:text-5xl">
                       {slide.title}
                     </h3>
-                    <p className="font-body text-white/85 text-lg leading-relaxed max-w-lg mb-8 drop-shadow-sm">
+                    <p className="font-body text-white/85 text-base lg:text-lg leading-relaxed max-w-lg mb-8 drop-shadow-sm">
                       {slide.description}
                     </p>
 
@@ -131,7 +131,7 @@ export default function DoubleCollageSlider({ slides, autoPlayInterval = 7000 }:
                   {/* COLLAGE COLUMN */}
                   <div className={`relative w-1/2 flex justify-center px-8 ${isImageLeft ? 'order-1' : 'order-2'}`}>
                     {/* Main rounded rectangle image */}
-                    <div className="relative w-[80%] max-w-[420px] aspect-[4/5] rounded-[2rem] overflow-hidden border-[4px] border-white/20 shadow-xl">
+                    <div className="relative w-[85%] max-w-[340px] aspect-[4/5] rounded-[2rem] overflow-hidden border-[4px] border-white/20 shadow-xl">
                       <Image
                         src={slide.image}
                         alt={slide.title}
@@ -142,7 +142,7 @@ export default function DoubleCollageSlider({ slides, autoPlayInterval = 7000 }:
                     </div>
 
                     {/* Overlapping circular image */}
-                    <div className={`absolute -bottom-10 ${isImageLeft ? '-right-4' : '-left-4'} w-[240px] aspect-square rounded-full overflow-hidden border-[6px] border-white/30 shadow-2xl z-10`}>
+                    <div className={`absolute -bottom-8 ${isImageLeft ? '-right-2' : '-left-2'} w-[180px] lg:w-[200px] aspect-square rounded-full overflow-hidden border-[6px] border-white/30 shadow-2xl z-10`}>
                       <Image
                         src={slide.image}
                         alt={slide.title}
@@ -187,7 +187,7 @@ export default function DoubleCollageSlider({ slides, autoPlayInterval = 7000 }:
       </div>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
         {chunkedSlides.map((_, idx) => (
           <button
             key={idx}

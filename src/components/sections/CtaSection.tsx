@@ -18,17 +18,34 @@ export default function CtaSection({ isolated = false }: CtaSectionProps) {
   return (
     <div id="contact" className={`relative w-full ${isolated ? "" : "md:-mt-[100vh]"}`} style={{ zIndex: 80 }}>
       {/* Continuous Full-Bleed Background Image extending behind white header */}
-      <div className={`${isolated ? "absolute inset-0" : "sticky top-0 h-screen"} w-full z-0 overflow-hidden pointer-events-none`}>
-        <Image
-          src="/images/hero/landscape-sunset.jpg"
-          alt="Rural Indian cattle and golden harvest countryside"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center scale-105"
-        />
-        {/* Atmospheric dark contrast scrim */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+      <div className={`${isolated ? "absolute inset-0" : "sticky top-0 h-screen"} w-full z-0 pointer-events-none`}>
+        {isolated ? (
+          <div className="sticky top-0 w-full h-[100vh] overflow-hidden">
+            <Image
+              src="/images/hero/landscape-sunset.jpg"
+              alt="Rural Indian cattle and golden harvest countryside"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center scale-105"
+            />
+            {/* Atmospheric dark contrast scrim */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+          </div>
+        ) : (
+          <div className="absolute inset-0 w-full h-full overflow-hidden">
+            <Image
+              src="/images/hero/landscape-sunset.jpg"
+              alt="Rural Indian cattle and golden harvest countryside"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center scale-105"
+            />
+            {/* Atmospheric dark contrast scrim */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+          </div>
+        )}
       </div>
 
       {/* ============================================================
@@ -80,7 +97,7 @@ export default function CtaSection({ isolated = false }: CtaSectionProps) {
                 Looking for Dependable Feed for Your Herd?
               </h2>
               <p className="font-display font-semibold text-[#8B1A1A] text-xl sm:text-2xl mb-4">
-                अपनी डेयरी के लिए भरोसेमंद पशु आहार
+                तुमच्या डेअरीसाठी भरवशाचे पशुखाद्य
               </p>
               <p className="font-body text-[#4A4A4A] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 Whether you are a dairy cooperative, progressive cattle farm owner, or feed distributor seeking uncompromised batch consistency — our commercial team is ready to assist.

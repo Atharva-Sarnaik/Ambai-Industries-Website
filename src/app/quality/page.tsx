@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function QualityPage() {
   return (
-    <div className="relative w-full overflow-hidden bg-[#F8F5EE]">
+    <div className="relative w-full overflow-clip bg-[#F8F5EE]">
       {/* ============================================================
           1. HERO SECTION: Full-Bleed Image under Transparent Navbar
       ============================================================ */}
@@ -39,7 +39,7 @@ export default function QualityPage() {
               Manufacturing Quality
            </h1>
            <p className="font-display font-semibold text-[#DEAC4F] text-xl sm:text-2xl drop-shadow-md">
-              गुणवत्ता एवं निर्माण प्रक्रिया
+              गुणवत्ता आणि निर्मिती प्रक्रिया
            </p>
         </div>
         
@@ -54,12 +54,12 @@ export default function QualityPage() {
       </section>
 
       {/* Page Content */}
-      <div className="pt-16 pb-24">
+      <div className="pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20">
         <SectionHeading
           eyebrow="MANUFACTURING DISCIPLINE"
           title="Consistency in Every Batch"
-          hindiTitle="गुणवत्ता एवं निर्माण प्रक्रिया"
+          hindiTitle="गुणवत्ता आणि निर्मिती प्रक्रिया"
           description="In livestock nutrition, batch stability is everything. Our controlled manufacturing protocols ensure that your herd receives consistent nutritional value every day."
         />
       </div>
@@ -119,10 +119,11 @@ export default function QualityPage() {
         </div>
       </div>
 
-      {/* Reusable Quality and Process Sections */}
-      <QualitySection />
-      <ProcessSection isolated />
-      <CtaSection isolated />
+      {/* Reusable Process Section */}
+      <ProcessSection isolated withSpacer />
+
+      {/* CTA Section */}
+      <CtaSection isolated={false} />
       </div>
     </div>
   );

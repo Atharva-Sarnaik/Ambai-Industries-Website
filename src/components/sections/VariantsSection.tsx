@@ -69,7 +69,7 @@ export default function VariantsSection() {
           <SectionHeading
             eyebrow="MANUFACTURING GRADES"
             title="Understanding Product Variants"
-            hindiTitle="विभिन्न वेरिएंट्स की जानकारी"
+            hindiTitle="विविध प्रकारांची माहिती"
             description="We manufacture our cattle feed products in three distinct particle and formulation grades to match diverse feeding practices across Indian farms."
           />
         </EditorialReveal>

@@ -44,7 +44,7 @@ export default function IntroSection() {
               className="font-display font-bold text-[#0D4B34] leading-tight mb-3 tracking-tight"
               style={{ fontSize: "clamp(2.2rem, 5.5vw, 3.8rem)" }}
             >
-              AMBAI INDUSTRIES FEEDS
+              AMBAI INDUSTRIES
             </h2>
 
             {/* Subtitle in burgundy red */}
@@ -60,7 +60,7 @@ export default function IntroSection() {
               <p>
                 Our mill is family-owned and operated with decades of expertise in Indian cattle nutrition.
                 We source maize, wheat, sorghum, and bran directly from trusted local mandis, ensuring
-                freshness and consistency in every 50 kg bag.
+                freshness and consistency in every bag.
               </p>
 
               <p>

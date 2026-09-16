@@ -66,7 +66,7 @@ export default function DarkFeaturedProduct() {
                         Maize Makka Cattle Feed
                       </h4>
                       <span className="text-xs text-white/80 font-body">
-                        उपलब्ध: Fine · Deluxe · Super Deluxe
+                        उपलब्ध: फाईन · डिलक्स · सुपर डिलक्स
                       </span>
                     </div>
                   </div>

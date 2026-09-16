@@ -34,7 +34,7 @@ export default function ProductShowcase() {
               <SectionHeading
                 eyebrow="OUR PRODUCTS"
                 title="Our Cattle Feed Products"
-                hindiTitle="हमारे पशु आहार उत्पाद"
+                hindiTitle="आमचे पशुखाद्य उत्पादने"
                 description="Manufactured for high digestibility, clean palatability, and balanced herd nutrition. Available in multiple particle grades to suit specific farming routines."
               />
             </EditorialReveal>

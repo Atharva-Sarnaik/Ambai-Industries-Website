@@ -17,7 +17,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   const activeVariant = product.variants[selectedVariantIndex];
 
   return (
-    <div className="pt-28 sm:pt-36 pb-24 bg-[#F8F5EE]">
+    <div className="pt-40 sm:pt-48 pb-24 bg-[#F8F5EE]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb / Back Link */}
         <div className="mb-8">
@@ -174,38 +174,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           </div>
         </div>
 
-        {/* Manufacturing & Handling Information */}
-        <div className="mt-20 pt-12 border-t border-[#D5DED3] grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-[#F1ECE0] p-6 rounded-2xl border border-[#CAD4C8]">
-            <Package className="w-8 h-8 text-[#15392A] mb-3" />
-            <h4 className="font-editorial text-lg font-bold text-[#15392A] mb-2">
-              Packaging & Shelf Integrity
-            </h4>
-            <p className="text-xs sm:text-sm text-[#5C6761] leading-relaxed">
-              Dispatched in heavy-duty 50 kg multi-wall woven polypropylene sacks with moisture resistance to maintain freshness in dairy storehouses.
-            </p>
-          </div>
 
-          <div className="bg-[#F1ECE0] p-6 rounded-2xl border border-[#CAD4C8]">
-            <CheckCircle2 className="w-8 h-8 text-[#15392A] mb-3" />
-            <h4 className="font-editorial text-lg font-bold text-[#15392A] mb-2">
-              Batch Consistency
-            </h4>
-            <p className="text-xs sm:text-sm text-[#5C6761] leading-relaxed">
-              Every production lot undergoes moisture screening and particle grading before bagging, ensuring cattle receive steady nutrition across repeated cycles.
-            </p>
-          </div>
-
-          <div className="bg-[#F1ECE0] p-6 rounded-2xl border border-[#CAD4C8]">
-            <Layers className="w-8 h-8 text-[#15392A] mb-3" />
-            <h4 className="font-editorial text-lg font-bold text-[#15392A] mb-2">
-              Future Backend Integration
-            </h4>
-            <p className="text-xs sm:text-sm text-[#5C6761] leading-relaxed">
-              Architected to connect with enterprise production and stock tracking APIs in future development phases without requiring front-end alterations.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

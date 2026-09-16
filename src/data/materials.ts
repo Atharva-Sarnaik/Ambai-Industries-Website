@@ -13,7 +13,7 @@ export const rawMaterialsData: RawMaterial[] = [
   {
     id: "mat-maize",
     name: "Yellow Maize",
-    localName: "Makka (मक्का)",
+    localName: "Maka (मका)",
     category: "Energy Cereal",
     description:
       "Carefully screened whole yellow maize kernels sourced from reputed agricultural grain mandis, thoroughly pre-cleaned to remove dirt, cob chaff, and field dust.",
@@ -24,7 +24,7 @@ export const rawMaterialsData: RawMaterial[] = [
   {
     id: "mat-wheat",
     name: "Wholesome Wheat",
-    localName: "Gehun (गेहूं)",
+    localName: "Gahu (गहू)",
     category: "Energy Cereal",
     description:
       "Locally harvested sound wheat grains selected for consistent grain density, high natural gluten, and clean milling characteristics.",
@@ -35,7 +35,7 @@ export const rawMaterialsData: RawMaterial[] = [
   {
     id: "mat-jowar",
     name: "Sorghum",
-    localName: "Jowar (ज्वार)",
+    localName: "Jwari (ज्वारी)",
     category: "Energy Cereal",
     description:
       "Traditional drought-hardy millet grain known for its clean digestion profile, low glycemic index, and adaptability in Indian dairy diets.",
@@ -44,20 +44,9 @@ export const rawMaterialsData: RawMaterial[] = [
     image: "/images/raw-materials/sorghum-jowar.jpg"
   },
   {
-    id: "mat-ddg",
-    name: "DDG (Distillers Dried Grains)",
-    localName: "डी.डी.जी. प्रोटीन घटक",
-    category: "Protein & By-Product",
-    description:
-      "A nutrient-concentrated co-product obtained from controlled grain processing, rich in residual proteins, yeast metabolites, and phosphorus.",
-    selectionCriteria: "Consistent golden-amber colour, sweet fresh aroma, and absence of burnt or caked particles.",
-    roleInFeed: "Contributes valuable bypass protein and essential organic nutrients for lactating dairy animals.",
-    image: "/images/raw-materials/ddg-protein.jpg"
-  },
-  {
     id: "mat-bran",
     name: "Wheat Bran",
-    localName: "Chokar / Bran (चोकर)",
+    localName: "Bhusa / Bran (भुसा)",
     category: "Fibre Source",
     description:
       "The nutrient-packed outer pericarp of wheat grain, separated during pneumatic roller milling to produce clean, broad, fluffy flakes.",
@@ -66,20 +55,9 @@ export const rawMaterialsData: RawMaterial[] = [
     image: "/images/raw-materials/wheat-bran.jpg"
   },
   {
-    id: "mat-kopad",
-    name: "Kopad (Cottonseed Cake)",
-    localName: "Kopad / Khol (कोपड / खली)",
-    category: "Protein & By-Product",
-    description:
-      "Mechanically pressed oil cake derived from cleaned whole cottonseeds, traditionally valued by Indian dairy farmers for herd sustenance.",
-    selectionCriteria: "Well-cured, firm cakes with characteristic nutty aroma, free from damp smell, mold, or adulterants.",
-    roleInFeed: "Provides valuable vegetable protein, natural residual oil fractions, and energy density for lactating cattle.",
-    image: "/images/raw-materials/cottonseed-cake.jpg"
-  },
-  {
     id: "mat-atta",
     name: "Wheat Atta Fractions",
-    localName: "Atta (आटा घटक)",
+    localName: "Pith (पीठ घटक)",
     category: "Binding & Grain Fraction",
     description:
       "Fine cereal flour fractions used to achieve balanced particle adhesion and smooth mash consistency during controlled batch mixing.",

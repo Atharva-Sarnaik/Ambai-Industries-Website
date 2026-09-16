@@ -53,7 +53,7 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-7 lg:gap-9 flex-1">
             <Link
               href="/products"
-              className={`text-sm font-semibold tracking-wide transition-colors duration-200 font-display ${
+              className={`text-base font-bold tracking-wide transition-colors duration-200 font-display ${
                 isTransparent
                   ? "text-white hover:text-white/80 drop-shadow-md"
                   : "text-[#8B1A1A] hover:text-[#6B1212]"
@@ -64,7 +64,7 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className={`text-sm font-semibold tracking-wide transition-colors duration-200 font-display ${
+              className={`text-base font-bold tracking-wide transition-colors duration-200 font-display ${
                 isTransparent
                   ? "text-white hover:text-white/80 drop-shadow-md"
                   : "text-[#8B1A1A] hover:text-[#6B1212]"
@@ -75,7 +75,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className={`text-sm font-semibold tracking-wide transition-colors duration-200 font-display ${
+              className={`text-base font-bold tracking-wide transition-colors duration-200 font-display ${
                 isTransparent
                   ? "text-white hover:text-white/80 drop-shadow-md"
                   : "text-[#8B1A1A] hover:text-[#6B1212]"
@@ -110,7 +110,7 @@ export default function Navbar() {
             {/* Location Link */}
             <Link
               href="/contact#location"
-              className={`flex items-center gap-1.5 text-sm font-semibold tracking-wide transition-colors duration-200 font-display ${
+              className={`flex items-center gap-1.5 text-base font-bold tracking-wide transition-colors duration-200 font-display ${
                 isTransparent
                   ? "text-white hover:text-white/80 drop-shadow-md"
                   : "text-[#8B1A1A] hover:text-[#6B1212]"
@@ -123,7 +123,7 @@ export default function Navbar() {
             {/* Direct Telephone Contact */}
             <a
               href={`tel:${companyData.phone}`}
-              className={`flex items-center gap-1.5 text-sm font-semibold tracking-wide transition-colors duration-200 font-display ${
+              className={`flex items-center gap-1.5 text-base font-bold tracking-wide transition-colors duration-200 font-display ${
                 isTransparent
                   ? "text-white hover:text-white/80 drop-shadow-md"
                   : "text-[#8B1A1A] hover:text-[#6B1212]"
@@ -160,9 +160,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-0 z-[95] bg-[#FAF6EE] pt-[90px] px-6 pb-8 overflow-y-auto flex flex-col"
+            className="md:hidden fixed inset-0 z-[95] bg-[#FAF6EE] pt-[140px] px-6 pb-8 overflow-y-auto flex flex-col"
           >
-            <div className="flex flex-col space-y-3 flex-1">
+            <div className="flex flex-col space-y-2 flex-1">
               {[
                 { href: "/", label: "Home" },
                 { href: "/products", label: "Products" },
@@ -174,7 +174,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-5 py-4 rounded-xl text-lg font-bold font-display transition-all flex items-center justify-between group ${
+                  className={`px-5 py-3.5 rounded-xl text-base font-bold font-display transition-all flex items-center justify-between group ${
                     pathname === link.href
                       ? "bg-[#8B1A1A] text-white shadow-md"
                       : "text-[#1A1A1A] hover:bg-[#EDE7D9] bg-white shadow-sm border border-[#E6DEC9]/60"
@@ -194,7 +194,7 @@ export default function Navbar() {
               </p>
               <a
                 href={`tel:${companyData.phone}`}
-                className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#8B1A1A] text-white font-bold text-lg font-display shadow-lg hover:bg-[#6B1212] transition-colors"
+                className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-xl bg-[#8B1A1A] text-white font-bold text-base font-display shadow-lg hover:bg-[#6B1212] transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call {companyData.displayPhone}</span>

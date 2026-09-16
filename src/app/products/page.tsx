@@ -40,7 +40,7 @@ export default function ProductsPage() {
               Product Catalogue
            </h1>
            <p className="font-display font-semibold text-[#DEAC4F] text-xl sm:text-2xl drop-shadow-md">
-              पशु आहार उत्पाद और ग्रेड्स
+              पशुखाद्य उत्पादने आणि ग्रेड्स
            </p>
         </div>
         

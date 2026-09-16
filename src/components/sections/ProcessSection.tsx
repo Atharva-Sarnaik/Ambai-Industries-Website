@@ -25,7 +25,7 @@ const processSteps: ProcessStep[] = [
     step: "01",
     tag: "Cleanliness First",
     title: "Raw Material Intake & Screening",
-    hindiTitle: "कच्चे माल की छँटाई एवं सफाई",
+    hindiTitle: "कच्च्या मालाची निवड आणि स्वच्छता",
     description:
       "All incoming grains (yellow maize, wheat, sorghum, and bran) are unloaded onto high-amplitude screening beds with aspirators to extract fine dust, stones, husk, and broken foreign matter.",
     image: "/images/manufacturing/step-intake.jpg",
@@ -36,7 +36,7 @@ const processSteps: ProcessStep[] = [
     step: "02",
     tag: "Calibrated Sizing",
     title: "Controlled Particle Milling",
-    hindiTitle: "नियंत्रित हैमर मिल ग्राइंडिंग",
+    hindiTitle: "नियंत्रित हॅमर मिल ग्राइंडिंग",
     description:
       "Cleaned whole grains enter heavy-duty calibrated hammer mills fitted with precise aperture screens. Grist size is controlled to maintain optimal rumen retention and prevent digestive acidosis.",
     image: "/images/manufacturing/step-milling.jpg",
@@ -47,7 +47,7 @@ const processSteps: ProcessStep[] = [
     step: "03",
     tag: "Batch Uniformity",
     title: "Homogeneous Batch Mixing",
-    hindiTitle: "सटीक न्यूट्रिएंट बैच ब्लेंडिंग",
+    hindiTitle: "अचूक न्यूट्रिएंट बॅच ब्लेंडिंग",
     description:
       "Coarse milled grains, pure wheat bran flakes, and protein fractions are loaded into industrial ribbon mixers. Automated batch timing ensures uniform dispersion of every component.",
     image: "/images/manufacturing/step-mixing.jpg",
@@ -58,7 +58,7 @@ const processSteps: ProcessStep[] = [
     step: "04",
     tag: "Moisture-Secure",
     title: "Automated Bagging & Sealing",
-    hindiTitle: "स्वचालित सिलाई एवं पैकेजिंग",
+    hindiTitle: "स्वयंचलित शिलाई आणि पॅकेजिंग",
     description:
       "Finished blended feed is systematically weighed into breathable 50 kg multi-wall woven polypropylene bags, stitched with industrial thread, and palletized for dry, puncture-resistant dispatch.",
     image: "/images/manufacturing/step-bagging.jpg",
@@ -69,23 +69,41 @@ const processSteps: ProcessStep[] = [
 
 interface ProcessSectionProps {
   isolated?: boolean;
+  withSpacer?: boolean;
 }
 
-export default function ProcessSection({ isolated = false }: ProcessSectionProps) {
+export default function ProcessSection({ isolated = false, withSpacer = false }: ProcessSectionProps) {
   return (
     <div className={`relative w-full ${isolated ? "" : "md:-mt-[100vh]"}`} style={{ zIndex: 60 }}>
       {/* Background Image: sticky for home parallax, absolute-fill for isolated pages */}
-      <div className={`${isolated ? "absolute inset-0" : "sticky top-0 h-screen"} w-full z-0 overflow-hidden pointer-events-none`}>
-        <Image
-          src="/images/manufacturing/facility-interior.jpg"
-          alt="Ambai Industries Manufacturing Facility"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center scale-105"
-        />
-        {/* Subtle clear contrast scrim */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75" />
+      <div className={`${isolated ? "absolute inset-0" : "sticky top-0 h-screen"} w-full z-0 pointer-events-none`}>
+        {isolated ? (
+          <div className="sticky top-0 w-full h-[100vh] overflow-hidden">
+            <Image
+              src="/images/manufacturing/facility-interior.jpg"
+              alt="Ambai Industries Manufacturing Facility"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center scale-105"
+            />
+            {/* Subtle clear contrast scrim */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75" />
+          </div>
+        ) : (
+          <div className="absolute inset-0 w-full h-full overflow-hidden">
+            <Image
+              src="/images/manufacturing/facility-interior.jpg"
+              alt="Ambai Industries Manufacturing Facility"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center scale-105"
+            />
+            {/* Subtle clear contrast scrim */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75" />
+          </div>
+        )}
       </div>
 
       {/* ============================================================
@@ -136,7 +154,7 @@ export default function ProcessSection({ isolated = false }: ProcessSectionProps
                 From Ingredient to Finished Feed
               </h2>
               <p className="font-display font-semibold text-[#8B1A1A] text-xl sm:text-2xl mb-4">
-                अनाज से तैयार पशु आहार तक की यात्रा
+                धान्यापासून तयार पशुखाद्यापर्यंतचा प्रवास
               </p>
               <p className="font-body text-[#4A4A4A] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 A systematic, controlled 4-phase manufacturing sequence designed to preserve natural grain nutrition and ensure batch-to-batch uniformity.
@@ -194,11 +212,9 @@ export default function ProcessSection({ isolated = false }: ProcessSectionProps
         </div>
       </div>
 
-      {!isolated && (
-        <div
-          className="hidden md:block h-screen pointer-events-none"
-          aria-hidden="true"
-        />
+      {/* 100vh Spacer to allow CtaSection (or next section) to overlap and parallax over this section */}
+      {(!isolated || withSpacer) && (
+        <div className="hidden md:block h-[100vh] w-full pointer-events-none" />
       )}
     </div>
   );

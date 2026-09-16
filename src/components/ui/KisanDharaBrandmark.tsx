@@ -11,15 +11,17 @@ export default function KisanDharaBrandmark({
 }: KisanDharaBrandmarkProps) {
   return (
     <div
-      className={`flex flex-col items-center justify-center transition-all duration-300 ease-out select-none ${className} ${
-        isCompact
-          ? "scale-85 sm:scale-90"
-          : "scale-100 sm:scale-105 md:scale-110"
-      }`}
+      className={`flex flex-col items-center justify-center transition-all duration-300 ease-out select-none ${className} ${isCompact
+          ? "scale-95 sm:scale-100"
+          : "scale-100 sm:scale-105"
+        }`}
     >
       <svg
         viewBox="0 0 320 100"
-        className="w-auto h-12 sm:h-14 md:h-16 max-w-[280px] sm:max-w-[320px] transition-all duration-300"
+        className={`w-auto transition-all duration-500 ease-out ${isCompact
+            ? "h-14 sm:h-16 md:h-20 max-w-[280px] sm:max-w-[340px] md:max-w-[400px]"
+            : "h-20 sm:h-24 md:h-32 max-w-[300px] sm:max-w-[400px] md:max-w-[600px]"
+          }`}
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -155,7 +157,7 @@ export default function KisanDharaBrandmark({
             fill="currentColor"
             opacity="0.9"
           >
-            CATTLE FEED MANUFACTURING
+
           </text>
         </g>
       </svg>

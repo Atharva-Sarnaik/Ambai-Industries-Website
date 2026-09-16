@@ -48,7 +48,7 @@ export default function CattleStorySection() {
               <SectionHeading
                 eyebrow="AGRICULTURAL CONNECTION"
                 title="Made for the People Behind Every Farm"
-                hindiTitle="हर किसान और पशुपालक के विश्वास का प्रतीक"
+                hindiTitle="प्रत्येक शेतकरी आणि पशुपालकांच्या विश्वासाचे प्रतीक"
                 description="In rural India, dairy farming is more than a commercial livelihood — it is a daily discipline rooted in herd well-being, family care, and mutual trust."
                 theme="dark"
               />
